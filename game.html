@@ -4,7 +4,8 @@
     <head>
         <meta charset=utf-8>
         <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
-        <title>Emscripten-Generated Code</title>
+        <link rel="stylesheet" href="dist/css/style.css">
+        <title>Fated Death</title>
         <style>
             body {
                 font-family: arial;
@@ -137,12 +138,31 @@
         </style>
     </head>
 
-    <body>
+    <body class="is-boxed has-animations lights-off is-loaded">
         <div class=spinner id=spinner></div>
         <div class=emscripten id=status>Downloading...</div>
         <div class=emscripten><progress hidden id=progress max=100 value=0></progress></div>
         <div class=emscripten_border><canvas class=emscripten id=canvas oncontextmenu=event.preventDefault()
                 tabindex=-1></canvas></div>
+        <div>Controls:</div>
+        <div class="game-controls">
+            <div>
+                Move:
+                <span>→</span>
+                <span>←</span>
+                <span>↑</span>
+                <span>/</span>
+                <span>W A S D</span>
+            </div>
+            <div>
+                Inventory: I
+            </div>
+            <div>
+                Map: M
+            </div>
+            <div>
+                Abilities: S
+            </div>
         <script>
             var statusElement = document.getElementById("status")
             var progressElement = document.getElementById("progress")
